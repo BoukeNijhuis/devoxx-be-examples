@@ -26,7 +26,6 @@ public class EndpointAgeTest {
         testAgeEndpoint("2000-12-31", 23);
     }
 
-    // HINT: use TODAY to compare dates
     public void testAgeEndpoint(String birthDate, int age) throws Exception {
         String result = this.restTemplate.getForObject("http://localhost:" + port + "/age/" + birthDate,
                 String.class);
